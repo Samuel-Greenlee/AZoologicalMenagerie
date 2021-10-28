@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AZoologicalMenagerie.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AZoologicalMenagerie.Controllers
 {
@@ -29,6 +30,8 @@ namespace AZoologicalMenagerie.Controllers
             return View();
         }
 
+        //Only allow registgered users to access this page
+        [Authorize]
         public IActionResult Bears()
         {
             ViewData["Message"] = "Welcome to the home of the bears";
@@ -36,6 +39,8 @@ namespace AZoologicalMenagerie.Controllers
             return View();
         }
 
+        //Only allow registgered users to access this page
+        [Authorize]
         public IActionResult Wolves()
         {
             ViewData["Message"] = "Welcome to the home of the wolves";
@@ -43,6 +48,8 @@ namespace AZoologicalMenagerie.Controllers
             return View();
         }
 
+        //Only allow registgered users to access this page
+        [Authorize]
         public IActionResult Foxes()
         {
             ViewData["Message"] = "Welcome to the home of the foxes";
@@ -50,6 +57,8 @@ namespace AZoologicalMenagerie.Controllers
             return View();
         }
 
+        //Only allow registgered users to access this page
+        [Authorize]
         public IActionResult Turtles()
         {
             ViewData["Message"] = "Welcome to the home of the turtles";
@@ -57,6 +66,8 @@ namespace AZoologicalMenagerie.Controllers
             return View();
         }
 
+        //Only allow registgered users to access this page
+        [Authorize]
         public IActionResult Fish()
         {
             ViewData["Message"] = "With hundreds of fish, here are some species to look out for in our pond.";
@@ -64,6 +75,8 @@ namespace AZoologicalMenagerie.Controllers
             return View();
         }
 
+        //Only allow registgered users to access this page
+        [Authorize]
         public IActionResult Merchandise()
         {
             ViewData["Message"] = "Feel free to look for what you need.";
@@ -71,6 +84,8 @@ namespace AZoologicalMenagerie.Controllers
             return View();
         }
 
+        //Only allow registgered users to access this page
+        [Authorize]
         public IActionResult EnclosuresPending()
         {
             ViewData["Message"] = "Featuring, the pending enclosures.";
