@@ -26,15 +26,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">AZoologicalMenagerie</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">A Zoological Menagerie</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Bears">Bears</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Wolves">Wolves</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Foxes">Foxes</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Turtles">Turtles</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Fish">Fish</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Merchandise">Merchandise</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="EnclosuresPending">Enclosures Pending</a></li>
+                    @await Html.PartialAsync("_LoginPartial")
                 </ul>
-                @await Html.PartialAsync("_LoginPartial")
+                
             </div>
         </div>
     </nav>
@@ -42,7 +50,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2021 - AZoologicalMenagerie</p>
+            <p>&copy; 2021 - A Zoological Menagerie</p>
         </footer>
     </div>
 
