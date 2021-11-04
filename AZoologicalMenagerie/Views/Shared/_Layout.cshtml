@@ -41,12 +41,24 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Merchandise">Merchandise</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="EnclosuresPending">Enclosures Pending</a></li>
                     <li><a asp-area="" asp-controller="UserExperiences" asp-action="Create">User Experiences</a></li>
-                    @await Html.PartialAsync("_LoginPartial")
+                    <li><a asp-area="" asp-controller="FavoriteAnimal" asp-action="Create">Favorite Animal</a></li>
                 </ul>
-                
+                @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
     </nav>
+    
+    @*Put spacing between the nav bar and the title of the webpage*@
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    @******************************************************************@
+
     <div class="container body-content">
         @RenderBody()
         <hr />
