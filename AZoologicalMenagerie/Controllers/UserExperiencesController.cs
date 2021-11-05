@@ -28,7 +28,7 @@ namespace AZoologicalMenagerie.Controllers
             return View(await _context.UserExperiences.ToListAsync());
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         // GET: UserExperiences/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -69,7 +69,7 @@ namespace AZoologicalMenagerie.Controllers
             return View(userExperiences);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         // GET: UserExperiences/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -86,7 +86,7 @@ namespace AZoologicalMenagerie.Controllers
             return View(userExperiences);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         // POST: UserExperiences/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -122,7 +122,7 @@ namespace AZoologicalMenagerie.Controllers
             return View(userExperiences);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         // GET: UserExperiences/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -141,7 +141,7 @@ namespace AZoologicalMenagerie.Controllers
             return View(userExperiences);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         // POST: UserExperiences/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
