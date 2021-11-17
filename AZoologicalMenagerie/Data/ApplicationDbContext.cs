@@ -21,6 +21,8 @@ namespace AZoologicalMenagerie.Data
 
         public DbSet<AnimalSuggestions> AnimalSuggestions { get; set; }
 
+        public DbSet<FavoriteMerchandise> FavoriteMerchandise { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder builder)
